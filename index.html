@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#home" class="logo">Rutuja <span>Wabale</span></a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <button id="dark-mode-toggle">🌙</button>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <div id="greeting">
+                <h2 id="greeting-text"></h2>
+            </div>
+            <div id="greeting"></div>
+            <h1>Hello, it's me <span>Rutuja</span></h1>
+            <h3 class="text-animation">I am a <span></span></h3>
+            <p>A skilled web developer with expertise in creating responsive and user-friendly websites.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1BXikaxuu1/"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/rutu_1303/"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/rutuja-wable-a38bb032b"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/RutujaWable03"><i class='bx bxl-github'></i></a>
+            </div>
+            <div class="btn-group">
+                <a href="Rutuja_CV1 (1).pdf" class="btn">Download CV</a>
+                <a href="#contact" class="btn">Contact</a>
+            </div>
+        </div>
+        <div class="home-img">
+            <img src="profile.jpg" alt="Profile Image">
+        </div>
+
+    </section>
+    <!--about section-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <div class="hexagon">
+                <img src="profile.jpg" alt="">
+
+            </div>
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Web Developer</h3>
+            <p>Hello! I'm Rutuja Wabale, a passionate web developer with a strong foundation in building dynamic,
+                responsive, and user-friendly websites. With expertise in front-end and back-end technologies, I strive
+                to create seamless web experiences that not only look great but also perform efficiently. I am
+                constantly learning and exploring new tools and frameworks to stay up-to-date with industry trends,
+                ensuring I can deliver high-quality solutions for my clients. My goal is to transform creative ideas
+                into functional web solutions that drive results.
+
+            </p>
+        </div>
+
+    </section>
+    <section class="Services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+        <div class="services-box">
+            <i class="bx bx-code-alt"></i>
+            <h3>Web Development</h3>
+            <p>Custom-built websites that are responsive, user-friendly, and tailored to meet your business needs.</p>
+        </div>
+        <div class="services-box">
+            <i class="bx bxl-html5"></i>
+
+            <h3>Front-End Developet</h3>
+            <p>Creating engaging and interactive user interfaces using HTML, CSS, JavaScript, and modern frameworks like
+                React and Angular.</p>
+        </div>
+
+        <div class="services-box">
+            <i class="bx bx-server"></i>
+            <h3>Back-End Developet</h3>
+            <p>Building robust back-end systems and APIs to ensure seamless data management and efficient performance.
+            </p>
+        </div>
+        <div class="services-box">
+            <i class="bx bx-wrench"></i>
+            <h3>Website Maintenance</h3>
+            <p>Regular updates and maintenance to ensure your website stays secure, fast, and fully functional.</p>
+        </div>
+        <div class="services-box">
+            <i class="bx bx-palette"></i>
+            <h3>UI/UX Design</h3>
+            <p>Crafting visually appealing and intuitive designs for optimal user experience.</p>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="progress-bar">
+            <label>HTML</label>
+            <div class="bar" style="width: 90%"></div>
+        </div>
+        <div class="progress-bar">
+            <label>CSS</label>
+            <div class="bar" style="width: 85%"></div>
+        </div>
+        <div class="progress-bar">
+            <label>JavaScript</label>
+            <div class="bar" style="width: 75%"></div>
+        </div>
+        <div class="progress-bar">
+            <label>React</label>
+            <div class="bar" style="width: 70%"></div>
+        </div>
+        <div class="progress-bar">
+            <label>Python</label>
+            <div class="bar" style="width: 60%"></div>
+        </div>
+        <div class="progress-bar">
+            <label>Java</label>
+            <div class="bar" style="width: 62%"></div>
+        </div>
+        <div class="progress-bar">
+            <label>SQL</label>
+            <div class="bar" style="width: 90%"></div>
+        </div>
+        <div class="progress-bar">
+            <label>PHP</label>
+            <div class="bar" style="width: 70%"></div>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <div class="top-header">
+            <h1>Projects</h1>
+        </div>
+        <div class="filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="web">Web</button>
+            <button class="filter-btn" data-category="mobile">Mobile</button>
+            <button class="filter-btn" data-category="uiux">UI/UX</button>
+        </div>
+        <div class="project-list">
+            <div class="project" data-category="web">
+                <a href="#" target="_blank">Web Project 1</a>
+            </div>
+            <div class="project" data-category="web">
+                <a href="#" target="_blank">Web Project 2</a>
+            </div>
+            <div class="project" data-category="mobile">
+                <a href="#">Mobile Project 1</a>
+            </div>
+            <div class="project" data-category="mobile">
+                <a href="#">Mobile Project 2</a>
+            </div>
+            <div class="project" data-category="uiux">
+                <a href="#">UI/UX Project 1</a>
+            </div>
+            <div class="project" data-category="uiux">
+                <a href="#">UI/UX Project 2</a>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h2 class="heading">Get in <span>Touch</span></h2>
+        <form id="contact-form">
+            <div class="input-box">
+                <input type="text" id="name" placeholder="Your Name">
+                <span class="error-message" id="name-error"></span>
+            </div>
+            <div class="input-box">
+                <input type="email" id="email" placeholder="Your Email">
+                <span class="error-message" id="email-error"></span>
+            </div>
+            <div class="input-box">
+                <input type="text" id="subject" placeholder="Subject">
+            </div>
+            <div class="input-box">
+                <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+                <span class="error-message" id="message-error"></span>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <a href="#"><i class='bx bxl-github'></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+            <li>
+                <a href="#">About Me</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+        <p class="copyright">
+            @ Rutuja Wabale | All Rights Reserved
+        </p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="greeting.js"></script>
+</body>
+</html>
