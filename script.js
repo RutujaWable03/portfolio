@@ -23,42 +23,58 @@ document.addEventListener("DOMContentLoaded", function () {
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
     const messageInput = document.getElementById("message");
-    const submitButton = form.querySelector(".btn");
+    const submitButton = document.getElementById("submit-button");
 
+    // General validation function for any input field
     function validate(input, errorElement, minLength, errorMessage) {
         if (input.value.trim().length < minLength) {
             errorElement.textContent = errorMessage;
             return false;
+        } else {
+            errorElement.textContent = "";
+            return true;
         }
-        errorElement.textContent = "";
-        return true;
     }
 
+    // Email validation function
     function validateEmail() {
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return validate(emailInput, document.getElementById("email-error"), 1, "Enter a valid email.") &&
-               emailPattern.test(emailInput.value.trim());
+        const emailError = document.getElementById("email-error");
+        if (!emailPattern.test(emailInput.value.trim())) {
+            emailError.textContent = "Enter a valid email.";
+            return false;
+        } else {
+            emailError.textContent = "";
+            return true;
+        }
     }
 
+    // Function to check the validity of the form and enable/disable the submit button
     function checkFormValidity() {
-        submitButton.disabled = !(validate(nameInput, document.getElementById("name-error"), 3, "At least 3 characters.") &&
-                                  validateEmail() &&
-                                  validate(messageInput, document.getElementById("message-error"), 20, "At least 20 characters."));
+        const isFormValid = validate(nameInput, document.getElementById("name-error"), 3, "At least 3 characters.") &&
+                             validateEmail() &&
+                             validate(messageInput, document.getElementById("message-error"), 20, "At least 20 characters.");
+                             
+        submitButton.disabled = !isFormValid;
     }
 
+    // Event listener for input changes to validate the form in real-time
     form.addEventListener("input", checkFormValidity);
 
+    // Form submission handler
     form.addEventListener("submit", function (e) {
-        e.preventDefault();
+        e.preventDefault(); // Prevent form from submitting normally
         if (!submitButton.disabled) {
             alert("Form submitted successfully!");
-            form.reset();
-            checkFormValidity();
+            form.reset(); // Reset form fields
+            checkFormValidity(); // Recheck form validity
         }
     });
 
+    // Initial check to ensure the form is valid when the page is loaded
     checkFormValidity();
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.getElementById("menu-icon");
